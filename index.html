@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://kit.fontawesome.com/217c26f1f3.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Gaming Addict</title>
+    <link rel="icon" type="image/x-icon" href="/images/faviconn.jpg" />
+  </head>
+  <body>
+    <!-- Nav -->
+    <header>
+      <a href="#" class="logo">GamingAddict</a>
+
+      <div class="action">
+        <div class="search-box">
+          <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <input type="text" placeholder="Search Games" />
+        </div>
+      </div>
+    </header>
+    <aside>
+      <ul>
+        <li class="btn-container">
+          <button id="aside-btn"><i class="fa-solid fa-angle-left"></i></button>
+        </li>
+        <li>
+          <a class="active" href="./index.html#home"
+            ><i class="fa-solid fa-house"></i
+            ><span class="aside-span">Home</span></a
+          >
+        </li>
+        <li class="aside-non-links">ACCOUNT</li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-user"></i
+            ><span class="aside-span">profile</span></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-star"></i
+            ><span class="aside-span">Favourites</span></a
+          >
+        </li>
+
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-message"></i
+            ><span class="aside-span">Chats</span></a
+          >
+        </li>
+
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-user-group"></i
+            ><span class="aside-span">Friends</span></a
+          >
+        </li>
+
+        <li class="aside-non-links">MAIN</li>
+
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-square-rss"></i
+            ><span class="aside-span">News</span></a
+          >
+        </li>
+
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-users-line"></i
+            ><span class="aside-span">Community</span></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-video"></i
+            ><span class="aside-span">Streams</span></a
+          >
+        </li>
+
+        <li class="aside-non-links">SUPPORT</li>
+
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-circle-exclamation"></i
+            ><span class="aside-span">Report</span></a
+          >
+        </li>
+
+        <li>
+          <a href="#"
+            ><i class="fa-solid fa-circle-question"></i
+            ><span class="aside-span">Help</span></a
+          >
+        </li>
+      </ul>
+    </aside>
+    <!-- Home Banner -->
+    <section class="main">
+      <div id="home" class="banner">
+        <div class="bg">
+          <div class="content">
+            <h2>
+              A New Home for <br />
+              Game Lovers
+            </h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Accusantium, suscipit?
+            </p>
+            <a href="#" class="btn">Join Now</a>
+          </div>
+          <img src="./images/homee.jpg" alt="game img" />
+        </div>
+      </div>
+
+      <!-- About -->
+
+      <div class="about">
+        <div class="content-box">
+          <h2>About Us</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+            veritatis sit, voluptatum, reprehenderit odio quibusdam unde ullam
+            fugit esse quis nihil iusto asperiores, facilis eligendi praesentium
+            quod deserunt labore qui alias repellendus corrupti accusamus
+            placeat perspiciatis. Magnam perspiciatis adipisci voluptatem.
+          </p>
+          <a href="#">Read more</a>
+        </div>
+        <img src="./images/aboutImg.jpg" alt="console controller" />
+      </div>
+
+      <!-- Game section -->
+      <section class="games-section">
+        <h2>Popular Games</h2>
+        <div class="line"></div>
+        <div class="btn-container">
+          <button class="filter-btn selected" type="button">all</button>
+          <button class="filter-btn" type="button">shooter</button>
+          <button class="filter-btn" type="button">sports</button>
+          <button class="filter-btn" type="button">racing</button>
+        </div>
+        <div class="games-container"></div>
+      </section>
+    </section>
+
+    <script src="./app.js"></script>
+    <script src="./games.js"></script>
+  </body>
+</html>
