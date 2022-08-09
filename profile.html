@@ -4,20 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./profile.css" />
     <script
       src="https://kit.fontawesome.com/217c26f1f3.js"
       crossorigin="anonymous"
     ></script>
-    <title>Gaming Addict</title>
-    <!-- <link rel="icon" type="image/x-icon" href="/images/faviconn.jpg" /> -->
+    <title>Document</title>
   </head>
   <body>
-    <!-- Nav -->
     <header>
       <a href="#" class="logo">GamingAddict</a>
 
@@ -41,7 +36,7 @@
         </li>
         <li class="aside-non-links">ACCOUNT</li>
         <li>
-          <a href="./profile.html"
+          <a href="#"
             ><i class="fa-solid fa-user"></i
             ><span class="aside-span">profile</span></a
           >
@@ -106,8 +101,7 @@
         </li>
       </ul>
     </aside>
-    <!-- Home Banner -->
-    <section class="main">
+    <section class="profile-section">
       <div class="login-content close-login">
         <div class="container">
           <div class="close-login-btn">
@@ -200,57 +194,37 @@
         <div class="login-bg"></div>
       </div>
 
-      <div id="home" class="banner">
-        <div class="bg">
-          <div class="content">
-            <h2>
-              A New Home for <br />
-              Game Lovers
-            </h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium, suscipit?
-            </p>
-            <button class="login-btn">Join Now</button>
-            <!-- <a href="#" class="btn">Join Now</a> -->
+      <div class="center-profile">
+        <div class="top">
+          <div class="round-img">
+            <img class="round" src="./images/default-profile.jpg" alt="user" />
           </div>
-          <img src="./images/homee.jpg" alt="game img" />
         </div>
       </div>
+      <div class="right-profile">
+        <div class="card-container">
+          <!-- <span class="pro">PRO</span> -->
+          <img class="round" src="./images/default-profile.jpg" alt="user" />
+          <div class="buttons">
+            <button class="primary login-btn">login</button>
+          </div>
 
-      <!-- About -->
-
-      <div class="about">
-        <div class="content-box">
-          <h2>About Us</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-            veritatis sit, voluptatum, reprehenderit odio quibusdam unde ullam
-            fugit esse quis nihil iusto asperiores, facilis eligendi praesentium
-            quod deserunt labore qui alias repellendus corrupti accusamus
-            placeat perspiciatis. Magnam perspiciatis adipisci voluptatem.
-          </p>
-          <a href="#">Read more</a>
+          <!-- <div class="skills">
+            <h6>Games</h6>
+            <ul>
+              <li>UI / UX</li>
+              <li>Front End Development</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>Node</li>
+            </ul>
+          </div> -->
         </div>
-        <img src="./images/aboutImg.jpg" alt="console controller" />
       </div>
-
-      <!-- Game section -->
-      <section class="games-section">
-        <h2>Popular Games</h2>
-        <div class="line"></div>
-        <div class="btn-container">
-          <button class="filter-btn selected" type="button">all</button>
-          <button class="filter-btn" type="button">shooter</button>
-          <button class="filter-btn" type="button">sports</button>
-          <button class="filter-btn" type="button">racing</button>
-        </div>
-        <div class="games-container"></div>
-      </section>
     </section>
-
     <script src="./app.js"></script>
-    <script src="./games.js"></script>
-    <!-- <script src="gameDetails.js"></script> -->
+    <script src="./profile.js"></script>
   </body>
 </html>

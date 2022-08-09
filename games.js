@@ -136,30 +136,31 @@ if(window.location.pathname == '/' || window.location.pathname == '/index.html')
   displayGamesArray(games)
 }
 // filter games
+let filled = false;
 filterBtns.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-        removeSelected();
-        e.currentTarget.classList.add('selected');
-        if(e.currentTarget.innerHTML == 'all'){
-            displayGamesArray(games);
+  btn.addEventListener('click', (e) => {
+    removeSelected();
+    e.currentTarget.classList.add('selected');
+    if(e.currentTarget.innerHTML == 'all'){
+      displayGamesArray(games);
+    }
+    else{
+      const filterGames = [];
+      // console.log(e.currentTarget.innerHTML);
+      for (let i =0; i<games.length; i++) {
+        if (games[i].category == e.currentTarget.innerHTML){
+          filterGames.push(games[i]);
+          filled = true
         }
-        else{
-        const filterGames = [];
-        let filled = false;
-        // console.log(e.currentTarget.innerHTML);
-        for (let i =0; i<games.length; i++) {
-            if (games[i].category == e.currentTarget.innerHTML){
-                filterGames.push(games[i]);
-                filled = true
-            }
-        }
-        if (filled)
-        displayGamesArray(filterGames)
-        else
-        gamesContainer.innerHTML = 'no games from selected category'
+      }
+      if (filled)
+      displayGamesArray(filterGames)
+      else
+      gamesContainer.innerHTML = 'no games from selected category'
     }
     })
 })
+
 
 function removeSelected() {
     filterBtns.forEach( btn => {
@@ -190,27 +191,38 @@ function displayGamesArray(array) {
     });
     displayGames = displayGames.join('');
     gamesContainer.innerHTML = displayGames;
-}
-
-
-// get the clicked game 
-const gameDetailsBtn = document.querySelectorAll('.game-details-btns');
-gameDetailsBtn.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        //  console.log(e.currentTarget.id);
-        let gameName = e.currentTarget.id;
-        let clickedGame = games.filter((game) => {return game.name == gameName}); 
-        let remainingGames = games.filter((game) => {return game.name != gameName}); 
-        // console.log(clickedGame);
-        // console.log(clickedGame[0].sliderImages[0])
-        // console.log(remainingGames)
-         displayGameDetailsPage(clickedGame, remainingGames);
+    // reset the btns enabled to click
+    changeBtn();
+  }
+  
+  
+  // get the clicked game 
+  
+  function changeBtn() {
+    const gameDetailsBtn = document.querySelectorAll('.game-details-btns');
+    gameDetailsBtn.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            //  console.log(e.currentTarget.id);
+            let gameName = e.currentTarget.id;
+            let clickedGame;
+            let remainingGames;
+    
+              clickedGame = games.filter((game) => {return game.name == gameName}); 
+              remainingGames = games.filter((game) => {return game.name != gameName}); 
+            
+            // console.log(clickedGame);
+            // console.log(clickedGame[0].sliderImages[0])
+            // console.log(remainingGames)
+             displayGameDetailsPage(clickedGame, remainingGames);
+        })
     })
-})
+
+  }
+
 // display game details page
 function displayGameDetailsPage(clickedGame, remainingGames) {
     // console.log(clickedGame[0].name);
-    sessionStorage.clear;
+    sessionStorage.removeItem('gameDetails');
 
 
     let displayCards = remainingGames.map( (game) => {
