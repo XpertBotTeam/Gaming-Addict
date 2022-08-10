@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     //get the logged in acc array
                     userAcc = usersAccounts.filter((account) => {return (account.name === loginUserName || account.email === loginUserName) && account.password === loginPassword});
-                    console.log(userAcc);
+                    // console.log(userAcc);
 
                     //clear the inputs
                     formInputs.forEach(input => {
@@ -238,6 +238,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     // save the logged in acc to the localStorage
                     localStorage.setItem('loggedInAcc', JSON.stringify(userAcc));
                     if(window.location.pathname == '/profile.html'){
+                        window.location.reload();
+                    };
+
+                    if(window.location.pathname == '/favourites.html'){
                         window.location.reload();
                     }
                     

@@ -300,6 +300,9 @@ function displayGameDetailsPage(clickedGame, remainingGames) {
                 alt=""
               />
             </div>
+            <h3>
+              ${clickedGame[0].name}
+            </h3>
             <p>
               ${clickedGame[0].desc}
             </p>

@@ -1,0 +1,35 @@
+.fav-section {
+  position: absolute;
+  right: 0;
+  width: 85vw;
+  top: 2rem;
+  margin-right: 4rem;
+}
+.fav-section .game-link {
+  font-size: 20px;
+  text-decoration: none;
+  color: #050e2d;
+  background: #1aeeef;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.fav-section .login-btn {
+  width: 100%;
+
+  font-size: 24px;
+  color: #050e2d;
+  background: #1aeeef;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.fav-section .remove-fav_game {
+  background: red;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  width: 100%;
+}
