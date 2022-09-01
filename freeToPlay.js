@@ -1,3 +1,5 @@
+loader();
+sidebar();
 const options = {
 	method: 'GET',
 	headers: {

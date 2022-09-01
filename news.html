@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="./profile.css" />
+    <link rel="stylesheet" href="./news.css" />
     <script
       src="https://kit.fontawesome.com/217c26f1f3.js"
       crossorigin="anonymous"
@@ -13,6 +13,7 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- Nav -->
     <header>
       <a href="#" class="logo">GamingAddict</a>
 
@@ -37,7 +38,7 @@
         </li>
         <li class="aside-non-links">ACCOUNT</li>
         <li>
-          <a href="#"
+          <a href="./profile.html"
             ><i class="fa-solid fa-user"></i
             ><span class="aside-span">profile</span></a
           >
@@ -207,131 +208,17 @@
         </ul>
       </div> -->
     </div>
-
-    <section class="profile-section">
-      <div class="login-content close-login">
-        <div class="container">
-          <div class="close-login-btn">
-            <button id="close-login"><i class="fa-solid fa-xmark"></i></button>
-          </div>
-          <form class="form" id="login">
-            <h1 class="form__title">Login</h1>
-            <div class="form__message form__message--error"></div>
-            <div class="form__input-group">
-              <input
-                type="text"
-                id="login-userName"
-                class="form__input"
-                autofocus
-                placeholder="Username or email"
-              />
-              <div class="form__input-error-message"></div>
-            </div>
-            <div class="form__input-group">
-              <input
-                type="password"
-                id="login-password"
-                class="form__input"
-                autofocus
-                placeholder="Password"
-              />
-              <div class="form__input-error-message"></div>
-            </div>
-            <button class="form__button" type="submit">Continue</button>
-            <p class="form__text">
-              <a href="#" class="form__link">Forgot your password?</a>
-            </p>
-            <p class="form__text">
-              <a class="form__link" href="./" id="linkCreateAccount"
-                >Don't have an account? Create account</a
-              >
-            </p>
-          </form>
-          <form class="form form--hidden" id="createAccount">
-            <h1 class="form__title">Create Account</h1>
-            <div class="form__message form__message--error"></div>
-            <div class="form__input-group">
-              <input
-                type="text"
-                id="signupUsername"
-                class="form__input"
-                autofocus
-                placeholder="Username"
-              />
-              <div class="form__input-error-message"></div>
-            </div>
-            <div class="form__input-group">
-              <input
-                type="text"
-                id="signupEmail"
-                class="form__input"
-                autofocus
-                placeholder="Email Address"
-              />
-              <div class="form__input-error-message"></div>
-            </div>
-            <div class="form__input-group">
-              <input
-                type="password"
-                id="signupPassword"
-                class="form__input"
-                autofocus
-                placeholder="Password"
-              />
-              <div class="form__input-error-message"></div>
-            </div>
-            <div class="form__input-group">
-              <input
-                type="password"
-                id="confirmPassword"
-                class="form__input"
-                autofocus
-                placeholder="Confirm password"
-              />
-              <div class="form__input-error-message"></div>
-            </div>
-            <button class="form__button" type="submit">Continue</button>
-            <p class="form__text">
-              <a class="form__link" href="./" id="linkLogin"
-                >Already have an account? Sign in</a
-              >
-            </p>
-          </form>
-        </div>
-        <div class="login-bg"></div>
+    <!-- loader -->
+    <div class="center-body">
+      <div class="loader-circle-11">
+        <div class="arc"></div>
+        <div class="arc"></div>
+        <div class="arc"></div>
       </div>
+    </div>
 
-      <div class="center-profile">
-        <div class="top">
-          <div class="round-img">
-            <img class="round" src="./images/default-profile.jpg" alt="user" />
-          </div>
-        </div>
-      </div>
-      <div class="right-profile">
-        <div class="card-container">
-          <!-- <span class="pro">PRO</span> -->
-          <img class="round" src="./images/default-profile.jpg" alt="user" />
-          <div class="buttons">
-            <button class="primary login-btn">login</button>
-          </div>
-
-          <!-- <div class="skills">
-            <h6>Games</h6>
-            <ul>
-              <li>UI / UX</li>
-              <li>Front End Development</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>React</li>
-              <li>Node</li>
-            </ul>
-          </div> -->
-        </div>
-      </div>
-    </section>
+    <section class="news-section"></section>
     <script src="./app.js"></script>
-    <script src="./profile.js"></script>
+    <script src="./news.js"></script>
   </body>
 </html>

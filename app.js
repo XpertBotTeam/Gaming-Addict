@@ -14,6 +14,7 @@ const gameDetailsSection = document.querySelector('.game-details-section');
 const profileSection = document.querySelector('.profile-section');
 const favSection  = document.querySelector('.fav-section');
 const freeToPlaySection = document.querySelector('.free-to-play_container');
+const newsSection = document.querySelector('.news-section');
 
 // console.log(aside);
 // console.log(window.location);
@@ -50,6 +51,11 @@ asideBtn.addEventListener('click', () => {
     freeToPlaySection.classList.remove('shrink-section');
     freeToPlaySection.classList.add('expand-section');
     };
+
+    if(window.location.pathname == "/news.html"){
+    newsSection.classList.remove('shrink-section');
+    newsSection.classList.add('expand-section');
+    };
     }
 
     else{
@@ -82,6 +88,11 @@ asideBtn.addEventListener('click', () => {
     if(window.location.pathname == '/freeToPlay.html'){
         freeToPlaySection.classList.remove('expand-section');
         freeToPlaySection.classList.add('shrink-section');
+    };
+
+    if(window.location.pathname == '/news.html'){
+        newsSection.classList.remove('expand-section');
+        newsSection.classList.add('shrink-section');
     };
    }
 
@@ -330,3 +341,12 @@ function sidebar() {
     });
 }
 
+
+
+function loader() {
+    const loaderSection = document.querySelector('.center-body');
+    loaderSection.classList.remove('remove');
+        window.addEventListener('load', () => {
+            loaderSection.classList.add('remove');
+        })
+}
