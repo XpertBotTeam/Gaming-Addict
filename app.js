@@ -12,12 +12,14 @@ const asideNoneLinks = document.querySelectorAll('.aside-non-links');
 const gameDetailsSection = document.querySelector('.game-details-section');
 //profile section
 const profileSection = document.querySelector('.profile-section');
+const favSection  = document.querySelector('.fav-section');
+const freeToPlaySection = document.querySelector('.free-to-play_container');
 
 // console.log(aside);
 // console.log(window.location);
 
 asideBtn.addEventListener('click', () => {
-    
+    console.log('clicked');
     if (asideBtn.innerHTML == '<i class="fa-solid fa-angle-left"></i>'){
     asideBtn.innerHTML = '<i class="fa-solid fa-angle-right"></i>';
     aside[0].classList.remove('show-aside');
@@ -39,6 +41,15 @@ asideBtn.addEventListener('click', () => {
     profileSection.classList.add('expand-section');
     };
 
+    if(window.location.pathname == "/favourites.html"){
+    favSection.classList.remove('shrink-section');
+    favSection.classList.add('expand-section');
+    };
+
+    if(window.location.pathname == "/freeToPlay.html"){
+    freeToPlaySection.classList.remove('shrink-section');
+    freeToPlaySection.classList.add('expand-section');
+    };
     }
 
     else{
@@ -63,16 +74,34 @@ asideBtn.addEventListener('click', () => {
         profileSection.classList.add('shrink-section');
     };
 
+    if(window.location.pathname == '/favourites.html'){
+        favSection.classList.remove('expand-section');
+        favSection.classList.add('shrink-section');
+    };
+    
+    if(window.location.pathname == '/freeToPlay.html'){
+        freeToPlaySection.classList.remove('expand-section');
+        freeToPlaySection.classList.add('shrink-section');
+    };
    }
 
 
     asideSpans.forEach((allE) => {
         // console.log(allE);
-        allE.classList.toggle('remove');
+        if ( aside[0].classList.contains('hide-aside')){
+            allE.classList.add('remove');
+        }else {
+            allE.classList.remove('remove');
+        }
+        
     });
 
     asideNoneLinks.forEach((allE) => {
-        allE.classList.toggle('remove');
+        if ( aside[0].classList.contains('hide-aside')){
+            allE.classList.add('remove');
+        }else {
+            allE.classList.remove('remove');
+        }
     });
 });
 
@@ -266,3 +295,38 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     })
+
+
+
+
+    // side bar
+    sidebar();
+function sidebar() {
+    const closeSidebar = document.querySelector("#close-button");
+    const openSidebar = document.querySelector(".toggle-sidebar")
+    const sideBar = document.querySelector(".sidebar");
+
+    closeSidebar.addEventListener("click", () => {
+        sideBar.classList.toggle("close-sidebar");
+        sideBar.classList.remove("open-sidebar");
+    })
+    
+    openSidebar.addEventListener("click", () => {
+    
+        asideSpans.forEach((allE) => {
+            // console.log(allE);
+            allE.classList.remove('remove');
+        });
+    
+        asideNoneLinks.forEach((allE) => {
+            allE.classList.remove('remove');
+        });
+    
+        if(sideBar.classList.contains("close-sidebar"))
+        {
+            sideBar.classList.remove("close-sidebar"); 
+        }
+        sideBar.classList.toggle("open-sidebar");
+    });
+}
+

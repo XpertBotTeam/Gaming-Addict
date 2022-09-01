@@ -166,3 +166,22 @@ button.primary.ghost {
   margin: 0 7px 7px 0;
   padding: 7px;
 } */
+
+@media screen and (max-width: 1140px) {
+  .profile-section {
+    width: 83vw;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .profile-section {
+    width: 78vw;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .profile-section {
+    padding-left: 12px;
+    width: 100vw;
+  }
+}

@@ -136,10 +136,10 @@ if(window.location.pathname == '/' || window.location.pathname == '/index.html')
   displayGamesArray(games)
 }
 // filter games
-let filled = false;
 filterBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     removeSelected();
+    let filled = false;
     e.currentTarget.classList.add('selected');
     if(e.currentTarget.innerHTML == 'all'){
       displayGamesArray(games);

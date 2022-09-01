@@ -5,6 +5,16 @@
   top: 2rem;
   margin-right: 4rem;
 }
+
+.expand-section {
+  width: 92vw;
+  transition: var(--transition);
+}
+.shrink-section {
+  width: 85vw;
+  transition: var(--transition);
+}
+
 .fav-section .game-link {
   font-size: 20px;
   text-decoration: none;
@@ -32,4 +42,24 @@
   border-radius: 20px;
   border: none;
   width: 100%;
+}
+
+@media screen and (max-width: 1450px) {
+  .fav-section {
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 1012px) {
+  .fav-section {
+    width: 80vw;
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .fav-section {
+    width: 100vw;
+    margin-right: 0;
+  }
 }
